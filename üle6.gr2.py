@@ -1,4 +1,9 @@
 from tkinter import *
+import tkinter as tk
+import time
+'''
+from PIL import ImageTk, Image
+'''
 #Martin Pettai
 #IT21
 #ül06gr2
@@ -9,11 +14,20 @@ from tkinter import *
 aken = Tk()
 aken.title('Joonistamine')
 
-
 #lõuendi loomine
 louend = Canvas(aken, width=1000, height=1000)
 louend.pack()
 
+
+#pilt
+
+minu_pilt = PhotoImage(file='oige.gif')
+louend.create_image(360,0, anchor=NW, image=minu_pilt)
+
+
+
+#teksti loomine
+louend.create_text(400,100, text="Hello Botswana!", fill="orange", font=("Tahoma", 30))
 
 #kujundite loomine
 louend.create_rectangle(0, 0, 350, 100, fill='#1296F5', outline='#993333', width=0)
